@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details</title>
+</head>
+<body>
+    <h2>User Details</h2>
+    <p>Username: {{ user.username }}</p>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    {% if word_count %}
+        <p>Word Count of Uploaded File: {{ word_count }}</p>
+        <p><a href="{{ url_for('uploaded_file', filename=user.filename) }}">Download File</a></p>
+    {% endif %}
+</body>
+</html>
